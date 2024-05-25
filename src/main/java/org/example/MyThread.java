@@ -6,7 +6,7 @@ public class MyThread extends Thread {
     String filename;
     public int part;
     byte[] data;
-    MyThread(String filename){
+    public MyThread(String filename){
         this.filename = filename;
     }
     @Override
@@ -23,7 +23,7 @@ public class MyThread extends Thread {
         }
     }
 
-    public int countOne(byte[] data){
+    public static int countOne(byte[] data){
         int controlNumber = 0;
         for(byte b: data){
             for (int i = 0; i < 8; i ++){
